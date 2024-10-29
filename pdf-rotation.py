@@ -1,9 +1,17 @@
+"""
+Script that takes in cmd lines and rotates pdf file 
+in given angle.
+"""
+
 import argparse
 from PyPDF4 import PdfFileReader as PdfReader
 from PyPDF4 import PdfFileWriter as PdfWriter
 import os
 
 def rotate_and_save(input_pdf, output_pdf, rotation_angle):
+    """
+    Rotates and saves new PDF.
+    """
     if not os.path.exists(input_pdf):
         print(f"Error: {input_pdf} does not exist.")
         return
